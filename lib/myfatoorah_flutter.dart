@@ -379,7 +379,7 @@ class MyFatoorahFlutter implements _SDKListener {
     this.apiLang = apiLang;
 
     http
-        .post(AppConstants.paymentStatus,
+        .post(Uri.parse(AppConstants.paymentStatus),
             headers: {
               HttpHeaders.contentTypeHeader: ContentType.json.toString(),
               HttpHeaders.authorizationHeader: AppConstants.token,
